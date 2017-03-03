@@ -1,0 +1,15 @@
+
+html{
+    font-size: $font-base-line *1.3;
+
+    @include mq(mediumAndBigger){
+        font-size: $font-base-line;
+    }
+}
+
+body{
+    font-family: $sitefont;
+    font-size: $size;
+    line-height: $lineh;
+    background-color: $ligth;
+}

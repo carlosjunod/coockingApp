@@ -1,0 +1,33 @@
+// colors
+$ligth: #f9f9f9;
+$dark: #0B3954;
+$primary: #087E8B;
+$alert: #FF5A5F;
+
+
+// breakpoints
+$smallScreen: 320;
+$mediumScreen: 768;
+$largeScreen: 1280;
+$x-largeScreen: 1920;
+
+//extra breakpoints
+$small-plus-Screen: ($smallScreen + $mediumScreen) / 2;
+$medium-plus-Screen: ($mediumScreen + $largeScreen) / 2;
+$large-plus-Screen: ($largeScreen + $x-largeScreen) / 2;
+
+// mediaquery rules
+$small-only: "only screen and (max-width: #{$smallScreen}+ 1px)";
+$medium-only: "only screen and (min-width: #{$smallScreen} + 1px) and (max-width: #{$mediumScreen}px)";
+$large-only: "only screen and (min-width: #{$largeScreen} + 1px) and (max-width: #{$x-largeScreen}px)";
+$x-large: "only screen and (min-width: #{$x-largeScreen}+ 1px)";
+
+// mediaquery
+$small-more: "only screen and (min-width: #{$smallScreen}px)";
+$medium-more: "only screen and (min-width: #{$mediumScreen}px)";
+$large-more: "only screen and (min-width: #{$largeScreen}px)";
+
+// extra queries
+$small-large: "only screen and (min-width: #{$small-plus-Screen}px)";
+$medium-large: "only screen and (min-width: #{$medium-plus-Screen}px)";
+$large-large: "only screen and (min-width: #{$large-plus-Screen}px)";

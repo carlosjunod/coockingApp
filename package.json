@@ -1,0 +1,18 @@
+{
+  "name": "coocking-app",
+  "version": "1.0.0",
+  "description": "handle recipes using JSON jQuery AJAX",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "carlosjunod",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
