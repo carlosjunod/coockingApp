@@ -62,6 +62,18 @@
             </section>
         </main>
 
+        <footer>
+            <p>
+                Build by @carlosjunod for Full Sail University
+            </p>
+
+            <ul>
+                <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+            </ul></a>
+        </footer>
 
         <div class="layer-modal"></div>
         <div id="modal">
@@ -71,11 +83,22 @@
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                 </div>
             </header>
-            <form action="">
-                <p><label for="">Recipe Name</label><input type="text" text=""></p>
-                <p><label for="">Recipe Description</label><input type="text" text=""></p>
-                <p><label for="">Star Rating</label><input type="text"></p>
-                <p><button type="submit">add new</button></p>
+            <form action="" id="js-add-recipe">
+                <p>
+                    <label for="recipe-name">Recipe Name</label>
+                    <input type="text" text="" id="recipe-name">
+                </p>
+                <p>
+                    <label for="recipe-desc">Recipe Description</label>
+                    <input type="text" text="" id="recipe-desc">
+                </p>
+                <p>
+                    <label for="recipe-stars">Star Rating</label>
+                    <input type="text" id="recipe-stars">
+                </p>
+                <p>
+                    <button type="submit">add new</button>
+                </p>
             </form>
         </div>
 

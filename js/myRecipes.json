@@ -7,7 +7,8 @@
                 "Step 1":["1 tablespoon coconut oil", "1/2 small red onion; chopped", "3 large Eggs", "2 ounces smoked salmon", "Black pepper", "1 large tomato; sliced", "1 tsp Capers", "1 tablespoon Fresh parsley; chopped", "Original recipe makes 1 Serving"]
                 },
             "category": ["breakfast", "eggs"],
-            "cookingTime": "15 minutes"
+            "cookingTime": "15 minutes",
+            "rating": "3"
         },
         {
             "title":"Huevos Rancheros with Avocado Salsa Verde",
@@ -18,7 +19,8 @@
                 "Assembly":["4+ corn tortillas","4+ eggs", "½ cup feta, crumbled", "Small handful cilantro, roughly chopped", "4 radishes, sliced into very thin pieces", "½ jalapeño, seeds and membranes removed, finely chopped", "Hot sauce (Cholula is my favorite)"]
                 },
             "category": ["breakfast", "eggs"],
-            "cookingTime": "30 minutes"
+            "cookingTime": "30 minutes",
+            "rating": "5"
         },
         {
             "title":"Banana Breakfast Smoothie",
@@ -27,7 +29,8 @@
                 "Step 1":["2 bananas; peeled and sliced", "8 ounces non fat plain yogurt","1 1/2 cups skim milk", "1 teaspoon toasted wheat germ"]
                 },
             "category": ["breakfast", "bannana", "drink"],
-            "cookingTime": "10 minutes"
+            "cookingTime": "10 minutes",
+            "rating": "4"
         },
         {
             "title":"Egg Sandwich",
@@ -36,7 +39,8 @@
                 "Step 1":["1 English muffin", "1 egg; scrambled", "spinach leaves", "1 slice cheese"]
                 },
             "category": ["breakfast", "egg", "sandwich"],
-            "cookingTime": "10 minutes"
+            "cookingTime": "10 minutes",
+            "rating": "2"
         },
         {
             "title":"Spinach and Strawberry Salad with Pepper Vinaigrette",
@@ -45,7 +49,8 @@
                 "Step 1":["2 tb Safflower Oil","1 tb Cider vinegar","2 ts Honey","1/4 ts Black pepper","1 ds Hot pepper sauce","1 ds Cayenne pepper","6 oz Fresh Spinach; Leaves Torn","12 Strawberries; Halved"]
                 },
             "category": ["salad", "sides"],
-            "cookingTime": "14 minutes"
+            "cookingTime": "14 minutes",
+            "rating": "1"
         }
     ]
 }

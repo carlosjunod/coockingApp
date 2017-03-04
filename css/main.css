@@ -2522,9 +2522,46 @@ main {
         main .recipe .rating-tools .edit li {
           padding: 0px 0.4rem; }
 
+footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: #1c3f42; }
+  @media only screen and (min-width: 1024px) {
+    footer {
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
+  footer p {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    font-style: italic;
+    color: rgba(249, 249, 249, 0.4);
+    padding: 1rem 0px;
+    line-height: 2em; }
+  footer ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-bottom: 1rem; }
+    footer ul li a {
+      display: block;
+      color: white;
+      font-size: 1.4em;
+      line-height: 2em; }
+      @media only screen and (min-width: 1024px) {
+        footer ul li a {
+          padding: 0px 2rem; } }
+      footer ul li a:hover {
+        color: rgba(255, 255, 255, 0.6); }
+
 @media only screen and (min-width: 1024px) {
   .layer-modal {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     background-color: rgba(13, 29, 30, 0.7);
     top: 0;

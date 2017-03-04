@@ -189,9 +189,52 @@ main{
 }
 // main
 
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: darken($primary, 40);
+
+    @include mq(mediumIntermedium){
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    p{
+        display: block;
+        text-align: center;
+        font-size: 0.9em;
+        font-style: italic;
+        color: rgba($ligth, .4);
+        padding: 1rem 0px;
+        line-height: 2em;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 1rem;
+
+        li a{
+            display: block;
+            color: white;
+            font-size: 1.4em;
+            line-height: 2em;
+
+            @include mq(mediumIntermedium){
+                padding: 0px 2rem;
+            }
+
+            &:hover{
+                color: rgba(white, .6);
+            }
+        }
+    }
+}
+//footer
+
 .layer-modal{
     @include mq(mediumIntermedium){
-        position: absolute;
+        position: fixed;
         z-index: 1;
         background-color: rgba(darken($primary, 50), .7);
         top: 0;
