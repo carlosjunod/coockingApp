@@ -12,4 +12,247 @@ body{
     font-size: $size;
     line-height: $lineh;
     background-color: $ligth;
+    position: relative;
 }
+
+a{
+    text-decoration: none;
+    cursor: default;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+header#header-site{
+    background-image: url('../images/banner_bg.png');
+    background-size: cover;
+    min-height: 33vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h1{
+        font-size: 3rem;
+        color: white;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+        padding: 2rem;
+        border: solid white 3px;
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+        margin: 0px auto 5rem auto;
+        text-align: center;
+        width: 50%;
+
+        @include mq(mediumIntermedium){
+            font-size: 7rem;
+            width: 30%;
+        }
+    }
+
+    nav{
+        align-self: flex-end;
+        width: 100%;
+        background-color: $yellow;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+
+        @include mq(mediumIntermedium){
+            flex-direction: row;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        ul{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @include mq(mediumIntermedium){
+                flex-direction: row;
+            }
+
+            li{
+
+                a{
+                    padding: 1.5rem 1rem;
+                    display: block;
+                    color: $dark;
+                    text-transform: capitalize;
+                }
+            }
+
+        }
+
+        button{
+            border: 0px;
+            flex-basis: 20%;
+            background-color: darken($primary, 30);
+            color: $ligth;
+            font-weight: bold;
+            font-size: 1.7rem;
+            padding: 1rem;
+            text-shadow: 1px 0px 0px darken($primary, 30);
+        }
+
+    }
+    // /nav
+}
+// header
+
+main{
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+
+    @include mq(mediumIntermedium){
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .breadcrumb{
+
+        ul{
+            display: flex;
+            padding: 1.5rem 1rem;
+            li{
+                a{
+                    color: $ligth;
+                    text-decoration: underline;
+                    font-size: 0.9em;
+                    font-style: italic;
+                    padding-right: .5rem;
+
+                    &.active{
+                        text-decoration: none;
+                        opacity: .6;
+                    }
+
+                    &:not(.active):after{
+                        content: " > ";
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    #recipes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        @include mq(mediumIntermedium){
+            justify-content: space-between;
+        }
+
+    }
+
+    .recipe{
+        background-color: $ligth;
+        padding: 1.5rem;
+        flex-basis: 90%;
+        margin-bottom: 2rem;
+        box-shadow: 0px 0px 2rem rgba(darken($primary, 40), .7);
+
+        @include mq(mediumIntermedium){
+            flex-basis: 31%;
+            margin-bottom: 4rem;
+        }
+
+        h2{
+            color: $primary;
+            font-size: 3rem;
+            padding: .8rem 0px;
+        }
+
+        .rating-tools{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0px;
+
+            .edit{
+                display: flex;
+                flex-grow: 2;
+
+                li{
+                    padding: 0px 0.4rem;
+                }
+            }
+        }
+    }
+}
+// main
+
+.layer-modal{
+    @include mq(mediumIntermedium){
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(darken($primary, 50), .7);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+#modal{
+
+    background-color: $ligth;
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    @include mq(mediumIntermedium){
+        position: absolute;
+        top: 25%;
+        width: 35vw;
+        height: 400px;
+        left: 30%;
+    }
+
+    header{
+        background-color: $primary;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        h3{
+            padding: 1rem;
+        }
+
+        #close-button{
+            padding: 1rem;
+            font-size: 3rem;
+        }
+    }
+
+    form{
+
+        p{
+            margin-bottom: 2rem;
+
+            label{
+                display: block;
+            }
+
+            input{
+                width: 100%;
+                display: block;
+                padding: 1rem;
+            }
+        }
+
+        padding: 3rem;
+    }
+}
+//modal

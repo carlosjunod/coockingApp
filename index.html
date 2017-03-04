@@ -4,13 +4,80 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CoockingApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 
     <body>
+        <header id="header-site">
+            <h1>CoockingApp</h1>
 
-        <h1>HELLO WOLD! 2</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">appetizers</a></li>
+                    <li><a href="#">Main Course</a></li>
+                    <li><a href="#">Salads</a></li>
+                    <li><a href="#">Soups</a></li>
+                    <li><a href="#">Desserts</a></li>
+                </ul>
+                <button id="add"><i class="fa fa-plus-circle" aria-hidden="true"></i> add recipe</button>
+            </nav>
+        </header>
+
+        <main>
+
+            <nav class="breadcrumb">
+                <ul>
+                    <li><a href="">Main Cousine</a></li>
+                    <li><a href="" class="active">Chicken</a></li>
+                </ul>
+            </nav>
+
+            <section id="recipes">
+                <article class="recipe">
+                    <img src="http://placehold.it/500x250/" alt="">
+                    <h2>Lorem ipsum dolor sit ame!</h2>
+                    <p>   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nobis inventore eaque aspernatur distinctio quam nesciunt ut repudiandae quas ea molestias, illum in vitae fugit officia perferendis excepturi dolor, doloribus.</p>
+
+                    <ul class="rating-tools">
+                        <li class="stars">
+                            <i class="fa fa-star-o" aria-hidden="true" data-rating="1"></i>
+                            <i class="fa fa-star-o" aria-hidden="true" data-rating="2"></i>
+                            <i class="fa fa-star-o" aria-hidden="true" data-rating="3"></i>
+                            <i class="fa fa-star-o" aria-hidden="true" data-rating="4"></i>
+                            <i class="fa fa-star-o" aria-hidden="true" data-rating="5"></i>
+                        </li>
+                        <li>
+                            <ul class="edit">
+                                <li><i class="fa fa-pencil" aria-hidden="true">        </i></li>
+                                <li><i class="fa fa-trash" aria-hidden="true"></i></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+
+
+            </section>
+        </main>
+
+
+        <div class="layer-modal"></div>
+        <div id="modal">
+            <header>
+                <h3>add Recipe</h3>
+                <div id="close-button">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </div>
+            </header>
+            <form action="">
+                <p><label for="">Recipe Name</label><input type="text" text=""></p>
+                <p><label for="">Recipe Description</label><input type="text" text=""></p>
+                <p><label for="">Star Rating</label><input type="text"></p>
+                <p><button type="submit">add new</button></p>
+            </form>
+        </div>
 
     <script src="js/main.js"></script>
     </body>

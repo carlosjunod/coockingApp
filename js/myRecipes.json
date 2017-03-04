@@ -1,0 +1,51 @@
+{
+    "myRecipes":[
+        {
+            "title":"Scrambled Eggs with Lox (Smoked Salmon)",
+            "preparation": ["Heat oil in a medium skillet and add onions. Cook until soft.", " Beat the eggs in a small bowl and add salmon. Season with pepper.", "Pour egg over onions and scramble.", "Top eggs with tomatoes and garnish with capers and parsley."],
+            "ingredients": {
+                "Step 1":["1 tablespoon coconut oil", "1/2 small red onion; chopped", "3 large Eggs", "2 ounces smoked salmon", "Black pepper", "1 large tomato; sliced", "1 tsp Capers", "1 tablespoon Fresh parsley; chopped", "Original recipe makes 1 Serving"]
+                },
+            "category": ["breakfast", "eggs"],
+            "cookingTime": "15 minutes"
+        },
+        {
+            "title":"Huevos Rancheros with Avocado Salsa Verde",
+            "preparation": ["Cook the beans: Heat a drizzle of olive oil in a medium-sized saucepan (with a lid) over medium heat. Once the oil is warmed, add the onion and sauté for a few minutes, stirring often, until the onions are turning translucent. Add the chili powder, cumin and cayenne and stir. Add the beans and ¼ cup water and stir to combine. Cover the pan, reduce heat, and let the beans simmer for about 10 minutes (if the beans seem dry at any point, add a splash of water). Remove from heat, mash some of the beans with the back of a big spoon and cover the pan until you are ready to serve.", "Make the avocado salsa verde: In a food processor, combine the salsa verde, avocado, cilantro, ½ of the jalapeño, garlic clove and the juice of ½ lime. Purée the salsa until it is super creamy, stopping to scrape down the sides as necessary. Transfer the salsa verde to a small saucepan and gently warm it over medium-low heat, stirring often (or transfer the salsa to a bowl and warm it in the microwave). Don't overheat this stuff! Cover the salsa until you're ready to serve.", "Cook the eggs: However you'd like 'em. I fried mine but I won't judge if you scramble yours. Top with a light sprinkle of salt and pepper.", "TWarm the tortillas: Directly over a medium-low gas burner flame or in a pan, flipping until warmed through.", "Assemble the huevos rancheros: On each plate, top tortilla(s) with black beans, avocado sauce and egg(s). Garnish with crumbled feta, cilantro, chopped radishes and jalapeño. Serve with a bottle of hot sauce on the side."],
+            "ingredients": {
+                "Spicy black beans":["2 cans black black beans, rinsed and drained (or about 3 cups cooked black beans)","1 tablespoon olive oil", "½ medium red onion, chopped", "½ teaspoon chili powder", "½ teaspoon cumin powder", "¼ teaspoon cayenne pepper (optional)", "1 lime, halved", "Salt and pepper, to taste"],
+                "Avocado Salsa Verde":["1 cup mild salsa verde from a jar","1 ripe avocado, pitted and sliced", "Big handful cilantro (some stems are ok)", "1 medium jalapeño, deseeded and roughly chopped (save ½ of jalapeño for garnish)", "1 garlic clove, roughly chopped", "½ lime, halved"],
+                "Assembly":["4+ corn tortillas","4+ eggs", "½ cup feta, crumbled", "Small handful cilantro, roughly chopped", "4 radishes, sliced into very thin pieces", "½ jalapeño, seeds and membranes removed, finely chopped", "Hot sauce (Cholula is my favorite)"]
+                },
+            "category": ["breakfast", "eggs"],
+            "cookingTime": "30 minutes"
+        },
+        {
+            "title":"Banana Breakfast Smoothie",
+            "preparation": ["In the blender, combine bananas, yogurt, milk, and wheat germ. Blend until smooth.", "Pour mixture into glass and serve immediately."],
+            "ingredients": {
+                "Step 1":["2 bananas; peeled and sliced", "8 ounces non fat plain yogurt","1 1/2 cups skim milk", "1 teaspoon toasted wheat germ"]
+                },
+            "category": ["breakfast", "bannana", "drink"],
+            "cookingTime": "10 minutes"
+        },
+        {
+            "title":"Egg Sandwich",
+            "preparation": ["Scramble/fry egg. Toast english muffin. Layer ingredients."],
+            "ingredients": {
+                "Step 1":["1 English muffin", "1 egg; scrambled", "spinach leaves", "1 slice cheese"]
+                },
+            "category": ["breakfast", "egg", "sandwich"],
+            "cookingTime": "10 minutes"
+        },
+        {
+            "title":"Spinach and Strawberry Salad with Pepper Vinaigrette",
+            "preparation": ["In small bowl, combine dressing ingredients. In a salad bowl, toss spinach with dressing. Toss in strawberries.","Garnish with toasted sesame seeds."," Variations: *Add halved seedless grapes or substitute them for strawberries *Add 1/4 cup slivered almonds Recipe by: 15 Minute Vegetarian Gourmet Posted to MC-Recipe Digest by Meg Antczak on Apr 19, 1998"],
+            "ingredients": {
+                "Step 1":["2 tb Safflower Oil","1 tb Cider vinegar","2 ts Honey","1/4 ts Black pepper","1 ds Hot pepper sauce","1 ds Cayenne pepper","6 oz Fresh Spinach; Leaves Torn","12 Strawberries; Halved"]
+                },
+            "category": ["salad", "sides"],
+            "cookingTime": "14 minutes"
+        }
+    ]
+}
