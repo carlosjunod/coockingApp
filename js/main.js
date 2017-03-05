@@ -30,7 +30,7 @@ $(document).ready(function () {
         $.ajax({
             'async': false,
             'global': false,
-            'url': "/js/recipes.json",
+            'url': "js/recipes.json",
             'dataType': "json",
             'success': function success(data) {
                 json = data;
