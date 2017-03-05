@@ -6,7 +6,7 @@ $(document).ready(function(){
     var form = $('#js-add-recipe');
     var addNewRecipe = $('#js-add-recipe').find('#add-recipe');
     let editRecipe = $('#js-add-recipe').find('#edit');
-    var allRecipes = [];
+    var localRecipes = [];
 
     // creating recipe object
     class Recipe {
@@ -18,8 +18,35 @@ $(document).ready(function(){
         }
     }
 
+    // Parsing JSON
+    var dataRecipes = (function() {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': "/js/recipes.json",
+            'dataType': "json",
+            'success': function (data) {
+                json = data;
+            }
+        });
+        return json;
+    })();
+
+    // converting Json Objecst into JS Objects
+    $.each(dataRecipes, (index, recipes) => {
+        $.each(recipes, (index, recipe) => {
+            // console.log(recipe.title);
+            let myRecipe = new Recipe(recipe.image, recipe.title, recipe.description, recipe.rating)
+            toDOM(myRecipe)
+        })
+    })
+
+    // restoring from local
+    // restoreLocal()
 
 
+    // click event to Create and add a new recipe
     $(addNewRecipe).on('click', e => {
         e.preventDefault()
         let nameRecipe = $('#recipe-name').val();
@@ -30,29 +57,10 @@ $(document).ready(function(){
         let myRecipe = new Recipe(imgRecipe, nameRecipe, descRecipe, starsRecipe)
 
         toDOM(myRecipe)
+        localRecipes.push(myRecipe)
     })
 
-    var dataRecipes = (function() {
-            var json = null;
-            $.ajax({
-                'async': false,
-                'global': false,
-                'url': "/js/recipes.json",
-                'dataType': "json",
-                'success': function (data) {
-                    json = data;
-                }
-            });
-            return json;
-        })();
 
-    $.each(dataRecipes, (index, recipes) => {
-        $.each(recipes, (index, recipe) => {
-            // console.log(recipe.title);
-            let myRecipe = new Recipe(recipe.image, recipe.title, recipe.description, recipe.rating)
-            toDOM(myRecipe)
-        })
-    })
 
     //opening modal
     $('#add').on('click', function(){
@@ -65,18 +73,8 @@ $(document).ready(function(){
     })
 
 
-    function closeModal(){
-        $('#modal').fadeOut();
-        $('.layer-modal').delay(100).fadeOut(function(){
-            $(form).find('input').each(function(index, field){
-                $(field).val('');
-            })
-        });
-    }
-
     function openModal(recipe = null){
-        console.log('OPENED!!!!!');
-        console.log($(recipe).find('h2').text());
+
         if (recipe != null) {
             //removing event from the button edit
             $(editRecipe).off()
@@ -104,14 +102,6 @@ $(document).ready(function(){
                 $(recipe).find('img').attr('src', $('#recipe-img').val());
                 $(recipe).find('h2').text($('#recipe-name').val());
                 $(recipe).find('p').text($('#recipe-desc').val());
-                console.log('----------------------------');
-                console.log('EDITTTED');
-                console.log('RECiPE::::');
-                console.log(recipe);
-                console.log('ITTTLE::::');
-                console.log($(recipe).find('h2').text());
-                console.log('----------------------------');
-                // $(recipe).find('.fa-star').length($('#recipe-stars').val())
 
                 closeModal()
             })
@@ -128,9 +118,22 @@ $(document).ready(function(){
         $('.layer-modal').fadeIn();
     }
 
+
+    function closeModal(){
+        $('#modal').fadeOut();
+        $('.layer-modal').delay(100).fadeOut(function(){
+            $(form).find('input').each(function(index, field){
+                $(field).val('');
+            })
+        });
+    }
+
+
+    // print objects into the DOM
     function toDOM(newRecip){
         let container = $('<article class="recipe"></article>')
         let rating = getRating(newRecip.rating).html();
+
         $(container).append(`
             <img src="${newRecip.img}" alt='${newRecip.title}'/>
             <h2>${newRecip.title}</h2>
@@ -148,7 +151,8 @@ $(document).ready(function(){
             </ul>
         `)
 
-        allRecipes.push($(container))
+
+        localRecipes.push($(container))
         $('#recipes').append(container)
 
         // Creating event on click for the edit button
@@ -168,13 +172,9 @@ $(document).ready(function(){
         })
 
         closeModal()
-
     }
 
-    function saveData(){
-
-    }
-
+    // generating the filled stars.
     function getRating(rating){
         var ratCont = $('<div></div>')
         for (var i = 0; i < rating; i++) {
@@ -184,5 +184,25 @@ $(document).ready(function(){
             $(ratCont).append('<i class="fa fa-star-o" aria-hidden="true" data-rating="1"></i>')
         }
         return ratCont;
+    }
+
+    $('#local').on('click', function() {
+        console.log('------------------ restaurando ------------------');
+        restoreLocal()
+    });
+
+
+
+    function restoreLocal(){
+        var loaded = localStorage.getItem('recipes2');
+        let allRecipes = $('#recipes').html(loaded)
+    }
+
+
+    saveLocal()
+
+    function saveLocal(){
+        let allRecipes = $('#recipes').html()
+        localStorage.setItem("recipes2", allRecipes);
     }
 })

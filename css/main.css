@@ -59,6 +59,253 @@ h5 {
 h6 {
   font-size: 1.6rem; }
 
+html {
+  font-size: 81.25%; }
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 62.5%; } }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.45;
+  background-color: #f9f9f9;
+  position: relative; }
+
+a {
+  text-decoration: none;
+  cursor: default; }
+  a:hover {
+    text-decoration: underline; }
+
+header#header-site {
+  background-image: url("../images/banner_bg.png");
+  background-size: cover;
+  min-height: 33vh;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 4rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+  header#header-site h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border: solid white 3px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    margin: 0px auto 5rem auto;
+    text-align: center;
+    width: 50%; }
+    @media only screen and (min-width: 1024px) {
+      header#header-site h1 {
+        font-size: 7rem;
+        width: 30%; } }
+  header#header-site nav {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: 100%;
+    background-color: #EAAF2E;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center; }
+    @media only screen and (min-width: 1024px) {
+      header#header-site nav {
+        -ms-flex-direction: row;
+            flex-direction: row;
+        padding-left: 10%;
+        padding-right: 10%; } }
+    header#header-site nav ul {
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      @media only screen and (min-width: 1024px) {
+        header#header-site nav ul {
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+      header#header-site nav ul li a {
+        padding: 1.5rem 1rem;
+        display: block;
+        color: #0B3954;
+        text-transform: capitalize; }
+    header#header-site nav button {
+      border: 0px;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+      background-color: #2b6166;
+      color: #f9f9f9;
+      font-weight: bold;
+      font-size: 1.7rem;
+      padding: 1rem;
+      text-shadow: 1px 0px 0px #2b6166; }
+
+main {
+  background-color: #6AB9C0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media only screen and (min-width: 1024px) {
+    main {
+      padding-left: 10%;
+      padding-right: 10%; } }
+  main .breadcrumb ul {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1.5rem 1rem; }
+    main .breadcrumb ul li a {
+      color: #f9f9f9;
+      text-decoration: underline;
+      font-size: 0.9em;
+      font-style: italic;
+      padding-right: .5rem; }
+      main .breadcrumb ul li a.active {
+        text-decoration: none;
+        opacity: .6; }
+      main .breadcrumb ul li a:not(.active):after {
+        content: " > "; }
+  main #recipes {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    @media only screen and (min-width: 1024px) {
+      main #recipes {
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+  main .recipe {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 2rem rgba(28, 63, 66, 0.7);
+    position: relative; }
+    @media only screen and (min-width: 1024px) {
+      main .recipe {
+        -ms-flex-preferred-size: 31%;
+            flex-basis: 31%;
+        margin-bottom: 4rem; } }
+    main .recipe h2 {
+      color: #6AB9C0;
+      font-size: 3rem;
+      padding: .8rem 0px; }
+    main .recipe .rating-tools {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      padding: 1rem 0px; }
+      main .recipe .rating-tools .edit {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-positive: 2;
+            flex-grow: 2; }
+        main .recipe .rating-tools .edit li {
+          padding: 0px 0.4rem; }
+
+footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: #1c3f42; }
+  @media only screen and (min-width: 1024px) {
+    footer {
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
+  footer p {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    font-style: italic;
+    color: rgba(249, 249, 249, 0.4);
+    padding: 1rem 0px;
+    line-height: 2em; }
+  footer ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-bottom: 1rem; }
+    footer ul li a {
+      display: block;
+      color: white;
+      font-size: 1.4em;
+      line-height: 2em; }
+      @media only screen and (min-width: 1024px) {
+        footer ul li a {
+          padding: 0px 2rem; } }
+      footer ul li a:hover {
+        color: rgba(255, 255, 255, 0.6); }
+
+@media only screen and (min-width: 1024px) {
+  .layer-modal {
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(13, 29, 30, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh; } }
+
+#modal {
+  background-color: #f9f9f9;
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  width: 100vw;
+  height: 100vh; }
+  @media only screen and (min-width: 1024px) {
+    #modal {
+      position: absolute;
+      top: 15%;
+      width: 35vw;
+      height: 600px;
+      left: 30%; } }
+  #modal header {
+    background-color: #6AB9C0;
+    color: white;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    #modal header h3 {
+      padding: 1rem; }
+    #modal header #close-button {
+      padding: 1rem;
+      font-size: 3rem; }
+  #modal form {
+    padding: 3rem; }
+    #modal form p {
+      margin-bottom: 2rem; }
+      #modal form p label {
+        display: block; }
+        #modal form p label span {
+          font-style: italic;
+          font-size: 0.8em;
+          color: silver; }
+      #modal form p input {
+        width: 100%;
+        display: block;
+        padding: 1rem; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2365,250 +2612,3 @@ h6 {
   margin: 0;
   overflow: visible;
   clip: auto; }
-
-html {
-  font-size: 81.25%; }
-  @media only screen and (min-width: 768px) {
-    html {
-      font-size: 62.5%; } }
-
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.45;
-  background-color: #f9f9f9;
-  position: relative; }
-
-a {
-  text-decoration: none;
-  cursor: default; }
-  a:hover {
-    text-decoration: underline; }
-
-header#header-site {
-  background-image: url("../images/banner_bg.png");
-  background-size: cover;
-  min-height: 33vh;
-  background-repeat: no-repeat;
-  background-position: top;
-  padding-top: 4rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: end;
-      justify-content: flex-end; }
-  header#header-site h1 {
-    font-size: 3rem;
-    color: white;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-    padding: 2rem;
-    border: solid white 3px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-    margin: 0px auto 5rem auto;
-    text-align: center;
-    width: 50%; }
-    @media only screen and (min-width: 1024px) {
-      header#header-site h1 {
-        font-size: 7rem;
-        width: 30%; } }
-  header#header-site nav {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    width: 100%;
-    background-color: #EAAF2E;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    text-align: center; }
-    @media only screen and (min-width: 1024px) {
-      header#header-site nav {
-        -ms-flex-direction: row;
-            flex-direction: row;
-        padding-left: 10%;
-        padding-right: 10%; } }
-    header#header-site nav ul {
-      width: 100%;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-      @media only screen and (min-width: 1024px) {
-        header#header-site nav ul {
-          -ms-flex-direction: row;
-              flex-direction: row; } }
-      header#header-site nav ul li a {
-        padding: 1.5rem 1rem;
-        display: block;
-        color: #0B3954;
-        text-transform: capitalize; }
-    header#header-site nav button {
-      border: 0px;
-      -ms-flex-preferred-size: 20%;
-          flex-basis: 20%;
-      background-color: #2b6166;
-      color: #f9f9f9;
-      font-weight: bold;
-      font-size: 1.7rem;
-      padding: 1rem;
-      text-shadow: 1px 0px 0px #2b6166; }
-
-main {
-  background-color: #6AB9C0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column; }
-  @media only screen and (min-width: 1024px) {
-    main {
-      padding-left: 10%;
-      padding-right: 10%; } }
-  main .breadcrumb ul {
-    display: -ms-flexbox;
-    display: flex;
-    padding: 1.5rem 1rem; }
-    main .breadcrumb ul li a {
-      color: #f9f9f9;
-      text-decoration: underline;
-      font-size: 0.9em;
-      font-style: italic;
-      padding-right: .5rem; }
-      main .breadcrumb ul li a.active {
-        text-decoration: none;
-        opacity: .6; }
-      main .breadcrumb ul li a:not(.active):after {
-        content: " > "; }
-  main #recipes {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: center;
-        justify-content: center; }
-    @media only screen and (min-width: 1024px) {
-      main #recipes {
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
-  main .recipe {
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    -ms-flex-preferred-size: 90%;
-        flex-basis: 90%;
-    margin-bottom: 2rem;
-    box-shadow: 0px 0px 2rem rgba(28, 63, 66, 0.7);
-    position: relative; }
-    @media only screen and (min-width: 1024px) {
-      main .recipe {
-        -ms-flex-preferred-size: 31%;
-            flex-basis: 31%;
-        margin-bottom: 4rem; } }
-    main .recipe h2 {
-      color: #6AB9C0;
-      font-size: 3rem;
-      padding: .8rem 0px; }
-    main .recipe .rating-tools {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-      padding: 1rem 0px; }
-      main .recipe .rating-tools .edit {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-positive: 2;
-            flex-grow: 2; }
-        main .recipe .rating-tools .edit li {
-          padding: 0px 0.4rem; }
-
-footer {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  background-color: #1c3f42; }
-  @media only screen and (min-width: 1024px) {
-    footer {
-      -ms-flex-direction: row;
-          flex-direction: row;
-      -ms-flex-pack: distribute;
-          justify-content: space-around; } }
-  footer p {
-    display: block;
-    text-align: center;
-    font-size: 0.9em;
-    font-style: italic;
-    color: rgba(249, 249, 249, 0.4);
-    padding: 1rem 0px;
-    line-height: 2em; }
-  footer ul {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    padding-bottom: 1rem; }
-    footer ul li a {
-      display: block;
-      color: white;
-      font-size: 1.4em;
-      line-height: 2em; }
-      @media only screen and (min-width: 1024px) {
-        footer ul li a {
-          padding: 0px 2rem; } }
-      footer ul li a:hover {
-        color: rgba(255, 255, 255, 0.6); }
-
-@media only screen and (min-width: 1024px) {
-  .layer-modal {
-    position: fixed;
-    z-index: 1;
-    background-color: rgba(13, 29, 30, 0.7);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh; } }
-
-#modal {
-  background-color: #f9f9f9;
-  position: fixed;
-  z-index: 2;
-  top: 0px;
-  width: 100vw;
-  height: 100vh; }
-  @media only screen and (min-width: 1024px) {
-    #modal {
-      position: absolute;
-      top: 15%;
-      width: 35vw;
-      height: 600px;
-      left: 30%; } }
-  #modal header {
-    background-color: #6AB9C0;
-    color: white;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
-    #modal header h3 {
-      padding: 1rem; }
-    #modal header #close-button {
-      padding: 1rem;
-      font-size: 3rem; }
-  #modal form {
-    padding: 3rem; }
-    #modal form p {
-      margin-bottom: 2rem; }
-      #modal form p label {
-        display: block; }
-        #modal form p label span {
-          font-style: italic;
-          font-size: 0.8em;
-          color: silver; }
-      #modal form p input {
-        width: 100%;
-        display: block;
-        padding: 1rem; }
