@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+const babel = require('gulp-babel');
 
 gulp.task('default', function() {
 
@@ -34,8 +35,17 @@ gulp.task('browser-sync', function(){
 })
 
 
-gulp.task('watch', ['browser-sync', 'scss'], function(){
+gulp.task('watch', ['browser-sync', 'scss', 'babel'], function(){
     // refresh.listen()
     gulp.watch(['./scss/*.scss'], ['scss'])
-    gulp.watch("*.html").on("change", reload);
+    gulp.watch("*.html").on("change", reload)
+    gulp.watch(['./js/dev/*.js'], ['babel']).on('change', reload)
 })
+
+gulp.task('babel', () => {
+    return gulp.src('./js/dev/*.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('./js'));
+});

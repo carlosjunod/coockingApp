@@ -1,0 +1,33 @@
+{
+    "myRecipes":[
+        {
+            "title":"Scrambled Eggs with Lox (Smoked Salmon)",
+            "description": "Heat oil in a medium skillet and add onions. Cook until soft. Beat the eggs in a small bowl and add salmon. Season with pepper. Pour egg over onions and scramble. Top eggs with tomatoes and garnish with capers and parsley.",
+            "image": "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/10/2/1/scrambled-eggs-salmon_s4x3.jpg.rend.hgtvcom.1280.960.jpeg",
+            "category": ["breakfast", "eggs"],
+            "rating": "4"
+        },
+        {
+            "title":"Huevos Rancheros with Avocado Salsa Verde",
+            "description": "Cook the beans: Heat a drizzle of olive oil in a medium-sized saucepan (with a lid) over medium heat. Once the oil is warmed, add the onion and sauté for a few minutes, stirring often, until the onions are turning translucent. Add the chili powder, cumin and cayenne and stir. Add the beans and ¼ cup water and stir to combine. Cover the pan, reduce heat, and let the beans simmer for about 10 minutes (if the beans seem dry at any point, add a splash of water). Remove from heat, mash some of the beans with the back of a big spoon and cover the pan until you are ready to serve. Make the avocado salsa verde: In a food processor, combine the salsa verde, avocado, cilantro, ½ of the jalapeño, garlic clove and the juice of ½ lime. Purée the salsa until it is super creamy, stopping to scrape down the sides as necessary. Transfer the salsa verde to a small saucepan and gently warm it over medium-low heat, stirring often (or transfer the salsa to a bowl and warm it in the microwave). Don't overheat this stuff! Cover the salsa until you're ready to serve. Cook the eggs: However you'd like 'em. I fried mine but I won't judge if you scramble yours. Top with a light sprinkle of salt and pepper. TWarm the tortillas: Directly over a medium-low gas burner flame or in a pan, flipping until warmed through. Assemble the huevos rancheros: On each plate, top tortilla(s) with black beans, avocado sauce and egg(s). Garnish with crumbled feta, cilantro, chopped radishes and jalapeño. Serve with a bottle of hot sauce on the side.",
+            "image": "http://i0.wp.com/perpetuallyhungryblog.files.wordpress.com/2014/03/img_1114.jpg",
+            "category": ["breakfast", "eggs"],
+            "rating": "5"
+        },
+        {
+            "title":"Banana Breakfast Smoothie",
+            "description": "In the blender, combine bananas, yogurt, milk, and wheat germ. Blend until smooth. Pour mixture into glass and serve immediately.",
+            "image": "http://www.horlicks.co.uk/Images/Product/Default/large/Horlicks-Banana-Breakfast-Smoothie.jpg",
+            "category": ["breakfast", "banana"],
+            "rating": "2"
+        },
+
+        {
+            "title":"Spinach and Strawberry Salad with Pepper Vinaigrette",
+            "description": "In small bowl, combine dressing ingredients. In a salad bowl, toss spinach with dressing. Toss in strawberries. Garnish with toasted sesame seeds. Variations: *Add halved seedless grapes or substitute them for strawberries *Add 1/4 cup slivered almonds Recipe by: 15 Minute Vegetarian Gourmet Posted to MC-Recipe Digest by Meg Antczak on Apr 19, 1998",
+            "image": "https://i.ytimg.com/vi/DR7v2hk3PGY/maxresdefault.jpg",
+            "category": ["salad", "lunch"],
+            "rating": "3"
+        }
+    ]
+}

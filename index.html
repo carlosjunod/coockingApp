@@ -50,7 +50,7 @@
                         </li>
                         <li>
                             <ul class="edit">
-                                <li><i class="fa fa-pencil" aria-hidden="true">        </i></li>
+                                <li><i class="fa fa-pencil" aria-hidden="true"></i></li>
                                 <li><i class="fa fa-trash" aria-hidden="true"></i></li>
                             </ul>
                         </li>
@@ -89,6 +89,10 @@
                     <input type="text" text="" id="recipe-name">
                 </p>
                 <p>
+                    <label for="recipe-name">Image <span>(you must to include http://...)</span></label>
+                    <input type="text" text="" id="recipe-img">
+                </p>
+                <p>
                     <label for="recipe-desc">Recipe Description</label>
                     <input type="text" text="" id="recipe-desc">
                 </p>
@@ -97,11 +101,13 @@
                     <input type="text" id="recipe-stars">
                 </p>
                 <p>
-                    <button type="submit">add new</button>
+                    <button type="submit" id="add-recipe">add new</button>
+                    <button type="submit" id="edit">edit recipe</button>
                 </p>
             </form>
         </div>
 
     <script src="js/main.js"></script>
+    <script src="js/simpleModal.js"></script>
     </body>
 </html>
