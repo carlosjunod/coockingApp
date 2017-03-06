@@ -77,13 +77,15 @@ $(document).ready(function(){
         $.ajax({
             'async': false,
             'global': false,
-            'url': "/js/recipes.json",
+            'url': "./js/recipes.json",
             'dataType': "json",
             'success': function (data) {
                 json = data;
             }
         });
+        alert(json);
         return json;
+
     })();
 
     // converting Json Objecst into JS Objects
@@ -192,7 +194,7 @@ $(document).ready(function(){
 
     // animations GreenSock
     if($('#header-site').width() <= 500){
-    
+
     } else if($('#header-site').width() >= 600){
         TweenLite.to('#header-site', 1.5, {height:'100vh', ease: Bounce.easeOut})
         TweenMax.staggerTo('#splash', 0.5, {opacity: 1, x:-200, delay: 1}, 0.2)
