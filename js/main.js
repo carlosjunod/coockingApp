@@ -83,7 +83,7 @@ $(document).ready(function () {
                 json = data;
             }
         });
-        alert(json);
+
         return json;
     }();
 
