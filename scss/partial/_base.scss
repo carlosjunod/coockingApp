@@ -333,6 +333,16 @@ footer{
                 display: block;
                 padding: 1rem;
             }
+
+            .error{
+                background-color: $alert;
+                color: white;
+                border-radius: 0 0 5px 5px;
+                font-size: .9em;
+                font-weight: lighter;
+                font-style: italic;
+                padding: .7rem;
+            }
         }
 
         padding: 3rem;

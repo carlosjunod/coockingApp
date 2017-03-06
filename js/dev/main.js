@@ -2,7 +2,6 @@ $(document).ready(function(){
     $('#modal').hide();
     $('.layer-modal').hide();
 
-
     var form = $('#js-add-recipe');
     var addNewRecipe = $('#js-add-recipe').find('#add-recipe');
     let editRecipe = $('#js-add-recipe').find('#edit');
@@ -53,6 +52,10 @@ $(document).ready(function(){
                     height: '100px'
                 }, function(){
                     $(this).remove()
+                    $('<div><div>').alertMe({
+                        type: 'alert',
+                        message: 'The recipe was deleted'
+                    });
                 })
             })
 
@@ -99,7 +102,6 @@ $(document).ready(function(){
     for (var i = 0; i < allRecipes.length; i++) {
         console.log(allRecipes[i]);
     }
-    console.log('=================');
 
 
     // click event to Create and add a new recipe
@@ -110,11 +112,32 @@ $(document).ready(function(){
         let starsRecipe= $('#recipe-stars').val();
         let imgRecipe= $('#recipe-img').val();
 
-        let myRecipe = new Recipe(imgRecipe, nameRecipe, descRecipe, starsRecipe)
+        if (nameRecipe === '' || descRecipe === '' || starsRecipe === '' || imgRecipe === '') {
+            // alert('it can\'t be empy');
+            // $('#recipe-name').closest('#js-add-recipe').append('<div style="background-color:red; color:white;">can be empty<div>');
+            let inputs = $(form).find('input')
 
-        myRecipe.intoDOM()
-        allRecipes.push(myRecipe)
-        closeModal()
+            $(inputs).each((index, input) => {
+                if ($(input).val() ==='') {
+                    if ($(input).parent().find('.error').length === 0) {
+                        $(input).parent().append('<div class="error">Sorry, this field cannot be empty<div>');
+                    }
+                } else {
+                    $(input).parent().find('.error').remove()
+                }
+            })
+
+        } else {
+            let myRecipe = new Recipe(imgRecipe, nameRecipe, descRecipe, starsRecipe)
+
+            myRecipe.intoDOM()
+            allRecipes.push(myRecipe)
+            closeModal()
+            $('<div><div>').alertMe({
+                type: 'success',
+                message: `${nameRecipe} was added`
+            });
+        }
     })
 
 
@@ -132,9 +155,7 @@ $(document).ready(function(){
 
     function openModal(recipe = null){
 
-        console.log('============= recipe in modal ===============');
-        console.log(recipe);
-
+        // edditing recipe
         if (recipe != null) {
             //removing event from the button edit
             $(editRecipe).off()
@@ -164,6 +185,10 @@ $(document).ready(function(){
                 $(recipe).find('p').text($('#recipe-desc').val());
                 saveLocal()
                 closeModal()
+                $('<div><div>').alertMe({
+                    type: 'warning',
+                    message: 'The recipe was eddited'
+                });
             })
 
 
@@ -199,11 +224,5 @@ $(document).ready(function(){
         TweenLite.to('#header-site', 1.5, {height:'100vh', ease: Bounce.easeOut})
         TweenMax.staggerTo('#splash', 0.5, {opacity: 1, x:-200, delay: 1}, 0.2)
     }
-
-
-
-    //
-    // TweenLite.to('#header-site', 1.5, {height:'100vh', ease: Bounce.easeOut})
-    // TweenMax.staggerFrom('#splash', 0.5, {opacity: 0, x:-200, delay: 1}, 0.2)
 
 })

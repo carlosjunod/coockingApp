@@ -329,6 +329,14 @@ footer {
         width: 100%;
         display: block;
         padding: 1rem; }
+      #modal form p .error {
+        background-color: #FF5A5F;
+        color: white;
+        border-radius: 0 0 5px 5px;
+        font-size: .9em;
+        font-weight: lighter;
+        font-style: italic;
+        padding: .7rem; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
