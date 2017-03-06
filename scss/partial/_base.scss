@@ -34,6 +34,10 @@ header#header-site{
     flex-direction: column;
     justify-content: flex-end;
 
+    @include mq(mediumIntermedium){
+        height: 0vh;
+    }
+
     h1{
         font-size: 3rem;
         color: white;
@@ -50,6 +54,36 @@ header#header-site{
             width: 30%;
         }
     }
+
+    #splash{
+        display: none;
+
+        @include mq(mediumIntermedium){
+            opacity: 0;
+            display: block;
+            position: absolute;
+            top: 10%;
+            left: 45%;
+            text-align: center;
+        }
+
+
+        #best-app{
+            color: white;
+            text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+            font-size: 2em;
+        }
+
+        #ever{
+            color: white;
+            text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+            font-size: 6em;
+            font-family: $marker;
+            line-height: 1;
+        }
+
+    }
+
 
     nav{
         align-self: flex-end;
@@ -257,7 +291,7 @@ footer{
     height: 100vh;
 
     @include mq(mediumIntermedium){
-        position: absolute;
+        position: fixed;
         top: 15%;
         width: 35vw;
         height: 600px;
